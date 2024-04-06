@@ -1,10 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-<<<<<<< HEAD
     "config:recommended"
-=======
-    "config:base",
     ":dependencyDashboard"
   ],
   "timezone": "Europe/Copenhagen",
@@ -15,6 +12,5 @@
   ],
   "assignees": [
     "aleksanderbl29"
->>>>>>> ab62b0f (configure renovate)
   ]
 }
