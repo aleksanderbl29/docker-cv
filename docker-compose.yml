@@ -1,0 +1,7 @@
+---
+services:
+  cv:
+    image: aleksanderbl/cv:2024-04-04
+    ports:
+      - 8080:80
+    restart: unless-stopped
