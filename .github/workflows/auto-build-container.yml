@@ -24,12 +24,16 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Install quarto
-      run: |
-        Rscript -e 'install.packages("quarto", repos = "https://cloud.r-project.org")'
+    - name: Install Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+      with:
+        version: 1.4.515
 
     - name: Render CV
-      run: quarto render quarto/
+      uses: quarto-dev/quarto-actions/render@v2
+      with:
+          to: html
+          path: quarto
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
