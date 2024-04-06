@@ -19,7 +19,7 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
           DOCKER_PASS: ${{ secrets.DOCKER_HUB_TOKEN }}
         with:
-          destination_container_repo: aleksanderbl/pihole-unbound
+          destination_container_repo: aleksanderbl/cv
           provider: dockerhub
-          short_description: 'Docker image for pihole and unbound'
+          short_description: 'Docker image for my personal CV'
           readme_file: 'README.md'
