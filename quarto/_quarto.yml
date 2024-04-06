@@ -1,6 +1,7 @@
 ---
 project:
   type: website
+  output-dir: ../cv/_site
 
 website:
   title: "Website"
