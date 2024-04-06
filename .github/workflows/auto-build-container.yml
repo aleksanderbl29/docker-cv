@@ -33,7 +33,7 @@ jobs:
       uses: quarto-dev/quarto-actions/render@v2
       with:
           to: html
-          path: quarto/
+          path: ./quarto/
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
