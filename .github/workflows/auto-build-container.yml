@@ -7,7 +7,7 @@ on:
     branches:
       - 'main'
     paths:
-      - 'pihole-unbound/**'
+      - 'cv/**'
       - '.github/workflows/auto-build-container.yml'
   # schedule:
   # # cron job to trigger the build daily
@@ -25,59 +25,39 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Get latest release of pihole docker container
-      id: latest_release
-      env:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        repository: "pi-hole/docker-pi-hole"
-        type: "stable"
-      run: echo release=$(curl --silent "https://api.github.com/repos/pi-hole/docker-pi-hole/releases/latest" | jq -r '.tag_name') >> $GITHUB_OUTPUT
-
-    - name: Get previous release tag
-      id: previous_release
-      env:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        repository: "aleksanderbl29/docker-pihole-unbound"
-        type: "stable"
-      run: echo release=$(curl --silent "https://api.github.com/repos/aleksanderbl29/docker-pihole-unbound/releases/latest" | jq -r '.tag_name' ) >> $GITHUB_OUTPUT
-
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
-      if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
-      if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
-      if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
+
+    - name: Get todays date
+      id: date
+      run: echo date=$(date +%Y-%m-%d) >> $GITHUB_OUTPUT
+
+    - name: Get branch name
+      id: branch
+      run: echo branch=$(echo ${{ github.ref }} | sed 's/refs\/heads\///') >> $GITHUB_OUTPUT
 
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
-        build-args: PIHOLE_VERSION=${{ steps.latest_release.outputs.release }}
-        context: "{{defaultContext}}:pihole-unbound/"
+        context: "{{defaultContext}}:cv/"
         platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
         push: true
-        tags: aleksanderbl/pihole-unbound:latest,aleksanderbl/pihole-unbound:${{ steps.latest_release.outputs.release }}
-      if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
+        tags: aleksanderbl/cv:latest,aleksanderbl/cv:${{ steps.date.outputs.date }}
 
     - name: Create release
       uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.latest_release.outputs.release }}
-        name: "${{ steps.latest_release.outputs.release }}"
-        body: |
-          Changelog found on [pi-hole github](https://github.com/pi-hole/docker-pi-hole/releases), please read the changes before updating.
-          You can update the docker image with:
-          ```
-          docker compose pull
-          docker compose up -d
-          ```
-      if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
+        tag_name: ${{ steps.date.outputs.date }}
+        name: "${{ steps.date.outputs.date }}"
+        body: "CV opdateret d. ${{ steps.date.outputs.date }}"
