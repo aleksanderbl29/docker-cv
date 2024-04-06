@@ -1,6 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
+<<<<<<< HEAD
     "config:recommended"
+=======
+    "config:base",
+    ":dependencyDashboard"
+  ],
+  "timezone": "Europe/Copenhagen",
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "assignees": [
+    "aleksanderbl29"
+>>>>>>> ab62b0f (configure renovate)
   ]
 }
