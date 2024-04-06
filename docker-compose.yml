@@ -1,7 +1,9 @@
 ---
 services:
   cv:
-    image: aleksanderbl/cv:2024-04-04
+    # image: aleksanderbl/cv:2024-04-04
+    image: dev/cv:latest
+    container_name: cv
     ports:
-      - 8080:80
+      - 80:80
     restart: unless-stopped
