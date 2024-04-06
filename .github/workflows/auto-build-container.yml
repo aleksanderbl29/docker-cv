@@ -8,6 +8,7 @@ on:
       - 'main'
     paths:
       - 'cv/**'
+      - 'quarto/**'
       - '.github/workflows/auto-build-container.yml'
   # schedule:
   # # cron job to trigger the build daily
