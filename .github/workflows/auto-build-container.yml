@@ -36,18 +36,19 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Install Quarto
-      uses: quarto-dev/quarto-actions/setup@v2
-      with:
-        version: 1.4.515
+    # - name: Install Quarto
+    #   uses: quarto-dev/quarto-actions/setup@v2
+    #   with:
+    #     version: 1.4.515
 
-    - name: Render CV
-      uses: quarto-dev/quarto-actions/render@v2
-      with:
-        to: html
-        path: quarto/
+    # - name: Render CV
+    #   uses: quarto-dev/quarto-actions/render@v2
+    #   with:
+    #     to: html
+    #     path: quarto/
 
-    # - name: Move rendered files
+    - name: Copy quarto files to cv folder
+      run: cp -r quarto/ cv/quarto/
 
     - name: Get todays date
       id: date
