@@ -1,1 +1,19 @@
-/* css styles */
+/*-- scss:defaults --*/
+// TOC
+$toc-color: #999;
+$toc-bg: #f9f9f9;
+
+// Heading
+$h2-font-size: 115%;
+
+/*-- scss:rules --*/
+h1, h2, h3 {
+  // color: black;
+  opacity: 1;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  // color: black;
+  opacity: 0.75;
+}
