@@ -59,4 +59,6 @@ jobs:
       with:
         tag_name: ${{ steps.date.outputs.date }}
         name: "${{ steps.date.outputs.date }}"
-        body: "CV opdateret d. ${{ steps.date.outputs.date }}"
+        body: |
+          CV opdateret d. ${{ steps.date.outputs.date }}
+          Kan hentes med `docker pull aleksanderbl/cv:${{ steps.date.outputs.date }}`
