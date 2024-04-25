@@ -1,9 +1,36 @@
 ---
-title: "Min hjemmeside"
+title: "Aleksander Bang-Larsen"
+subtitle: "Curriculum Vitae"
+# title: Curriculum Vitae
 ---
 
-This is a Quarto website.
+# Om mig
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Jeg er statskundsksabsstuderende med en stor interesse for kvantitative metoder og vælgeradfærd.
 
-> Her er noget nyt tekst jeg lige har lavet
+Udover mine studier bruger jeg meget tid på at lære nye ting, og jeg har viden indenfor mange teknologiske emner.
+
+# Uddannelse
+
+## 2021 til 2024 --- Bachelor i statskundskab v. Aarhus Universitet
+
+Jeg er i gang med min bachelor i statskundskab på Aarhus Universitet. Mine primære interesser er velgeradfærd samt kvantitative metoder med erfaring indenfor både eksperimentelle og observationelle data.
+
+## 2020 --- Studentereksamen fra Herning Gymnasium
+
+Jeg har min studentereksamen fra Herning Gymnasium. Her havde jeg en samfundssproglig studieretning med samfundsfag A, engelsk A og fransk A som hovedfag.
+
+# Erfaring
+
+## 2023 til nu --- Underviser i Excel og VBA hos Djøf
+
+Underviser i Excel og VBA for Djøf Studerende, hvor jeg underviser medlemmer af Djøf Studerende i Excel på fire kursusniveauer samt VBA på to niveauer.
+Her har jeg fået forbedret mine undervisningskompetencer og er blevet bedste venner med Excel.
+
+## 2021 til 2023 --- Student Assistant hos EG A/S
+
+Ansat som studentermedhjælper i først kreditor-bogholderiet, og derefter debitor-bogholderiet, i IT-virksomheden EG, hvor jeg indtil studiestart i september 2021 arbejdede fuldtid og herefter deltid ved siden af studiet. Jeg håndterede varierende bogholderi-opgaver i Excel, ERP-systemet NetSuite samt lønningssystemet Zalaris.
+
+## 2020 til 2021 --- Video Editor og ansvarlig for webshops hos Gigantic ApS
+
+I de første 4 måneder af min ansættelse var mine primære opgaver at redigere reklame-indhold til sociale medier for diverse webshops i virksomheden i Shopify. Herefter fik jeg ansvaret for et af virksomhedens webshop-brands, hvor jeg styrede webshops i Danmark, Sverige, Norge og Finland.
