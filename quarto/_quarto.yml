@@ -1,18 +1,35 @@
 ---
 project:
-  type: website
-  output-dir: ../cv/_site
+  title: "Aleksander Bang-Larsen - CV"
+  preview:
+    browser: false
+    port: 4200
 
-website:
-  title: "Website"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+author: "Aleksander Bang-Larsen"
 
 format:
   html:
+    toc: true
+    number_sections: true
     theme: cosmo
     css: styles.css
-    toc: true
+    highlight: github
+
+
+
+#   type: website
+#   output-dir: ../cv/_site
+
+# website:
+#   title: "Website"
+#   navbar:
+#     left:
+#       - href: index.qmd
+#         text: Home
+#       - about.qmd
+
+# format:
+#   html:
+#     theme: cosmo
+#     css: styles.css
+#     toc: true
