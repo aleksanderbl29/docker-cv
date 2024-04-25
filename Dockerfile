@@ -1,4 +1,4 @@
-FROM ghcr.io/quarto-dev/quarto-full:1.4.536 AS build
+FROM ghcr.io/quarto-dev/quarto-full:1.4.553 AS build
 
 COPY quarto /mysite
 RUN quarto render /mysite --output-dir /usr/share/nginx/html
