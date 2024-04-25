@@ -5,7 +5,14 @@ project:
     browser: false
     port: 4200
 
-author: "Aleksander Bang-Larsen"
+author:
+  - name: "Aleksander Bang-Larsen"
+    email: "cv@aleksanderbl.dk"
+
+lang: "da"
+language:
+  title-block-author-single: "Navn"
+  title-block-modified: "Senest ændret"
 
 format:
   html:
