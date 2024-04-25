@@ -1,4 +1,4 @@
-FROM ghcr.io/quarto-dev/quarto-full:1.4.553 AS build
+FROM ghcr.io/quarto-dev/quarto-full:1.5.31 AS build
 
 COPY quarto /mysite
 
