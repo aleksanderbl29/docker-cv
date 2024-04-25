@@ -1,7 +1,8 @@
-FROM ghcr.io/quarto-dev/quarto:1.5.31 AS build
+FROM ghcr.io/quarto-dev/quarto-full:1.4.553 AS build
 
 COPY quarto /mysite
-RUN apt-get update && apt-get upgrade -y
+
+# RUN apt-get update && apt-get upgrade -y
 RUN quarto render /mysite --output-dir /usr/share/nginx/html
 
 FROM nginx:latest

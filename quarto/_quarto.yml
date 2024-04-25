@@ -1,18 +1,50 @@
 ---
 project:
-  type: website
-  output-dir: ../cv/_site
+  title: "Aleksander Bang-Larsen - CV"
+  preview:
+    browser: false
+    port: 4200
 
-website:
-  title: "Website"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+author:
+  - name: "Aleksander Bang-Larsen"
+    email: "cv@aleksanderbl.dk"
+
+lang: "da"
+language:
+  title-block-author-single: "Navn"
+  title-block-modified: "Senest ændret"
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
     toc: true
+    number_sections: true
+    theme:
+      light: [flatly, styles.css]
+      dark: [darkly, styles.css]
+    highlight: github
+    date-modified: last-modified
+    smooth-scroll: true
+    code-links:
+      # - repo
+      - text: Denne side
+        href: https://github.com/aleksanderbl29/docker-cv
+        target: _blank
+        icon: github
+    other-links:
+      - text: LinkedIn
+        href: https://linkedin.com/in/aleksanderbl
+        target: _blank
+        icon: linkedin
+      - text: GitHub
+        href: https://github.com/aleksanderbl29
+        target: _blank
+        icon: github
+      - text: Website
+        href: https://aleksanderbl.dk
+        target: _blank
+        icon: globe
+  pdf: default
+  docx: default
+  # revealjs:
+  #   output-file: revealjs-presentation.html
+format-links: [html, pdf, docx]
