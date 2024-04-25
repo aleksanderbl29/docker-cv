@@ -25,7 +25,7 @@ format:
     date-modified: last-modified
     smooth-scroll: true
     code-links:
-      - repo
+      # - repo
       - text: Denne side
         href: https://github.com/aleksanderbl29/docker-cv
         target: _blank
