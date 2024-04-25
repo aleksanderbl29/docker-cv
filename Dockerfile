@@ -1,4 +1,4 @@
-FROM ghcr.io/quarto-dev/quarto:1.3.340 AS build
+FROM ghcr.io/quarto-dev/quarto:1.5.31 AS build
 
 COPY quarto /mysite
 RUN apt-get update && apt-get upgrade -y
