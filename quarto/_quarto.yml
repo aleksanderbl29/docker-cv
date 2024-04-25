@@ -14,22 +14,3 @@ format:
     theme: cosmo
     css: styles.css
     highlight: github
-
-
-
-#   type: website
-#   output-dir: ../cv/_site
-
-# website:
-#   title: "Website"
-#   navbar:
-#     left:
-#       - href: index.qmd
-#         text: Home
-#       - about.qmd
-
-# format:
-#   html:
-#     theme: cosmo
-#     css: styles.css
-#     toc: true
