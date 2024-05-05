@@ -38,7 +38,7 @@ jobs:
 
     - name: Get todays date
       id: date
-      run: echo date=$(date +%Y-%m-%d) >> $GITHUB_OUTPUT
+      run: echo date=$(date +%Y.%m.%d) >> $GITHUB_OUTPUT
 
     - name: Get branch name
       id: branch
